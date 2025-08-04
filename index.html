@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mañanas Victoriosas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="./assets/styles/responsive.css" />
   </head>
   <body>
     <header id="cabesera">
       <a href="index.html">
         <img
-          src="./assets/img/mv.png"
+          src="./assets/img/fs.jpg"
           alt="logo de Mañanas Victoriosas"
           title="logo de Mañanas Victoriosas"
         />
       </a>
-      <h1>Mañanas victoriosas</h1>
+      <h1>La Fuente Salta</h1>
       <nav id="menu">
         <ul>
           <li>
@@ -34,29 +42,143 @@
       </nav>
     </header>
     <main>
-      <div class="filas">
-        <!-- Contenido Principal de la pagina -->
-        <!-- carrusel y parrafo -->
-        <div class="card-noticia carrusel">
-          <h2>Futuro carrusel</h2>
-          <img
-            class="img-noticias"
-            src="./assets/img/policial.webp"
-            alt="policial"
-            title="policial"
-          />
+      <!-- carrusel -->
+      <section class="carousel-edit">
+        <div
+          id="carouselExampleCaptions"
+          data-bs-ride="carousel"
+          class="carousel slide w-51"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/img/politico.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="title-carrousel">Titulo de la noticia</h5>
+                <p class="resume-carrousel">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  itaque..
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/img/policial.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="title-carrousel">Titulo de la noticia</h5>
+                <p class="resume-carrousel">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  itaque..
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/img/construccion.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="title-carrousel">Titulo de la noticia</h5>
+                <p class="resume-carrousel">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  itaque..
+                </p>
+              </div>
+            </div>
+            <!-- otra imagen -->
+            <div class="carousel-item">
+              <img
+                src="assets/img/autos.webp"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="title-carrousel">Titulo de la noticia</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  itaque..
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+      </section>
+
+      <div class="filas">
         <div class="card-noticia">
           <a
             href="https://www.eltribuno.com/policiales/2025-7-7-8-37-0-imprudencia-al-volante-desata-un-violento-choque-en-cadena-en-avenida-paraguay"
+            target="_blank"
           >
-            <h2>Siniestro vial en Salta</h2>
             <img
               class="img-noticias"
               src="./assets/img/policial.webp"
               alt="foto Siniestro vial"
               title="Siniestro vial"
             />
+            <h2>Siniestro vial en Salta</h2>
             <p>
               Imprudencia al volante desata un violento choque en cadena en
               Avenida Paraguay
@@ -68,14 +190,15 @@
         <div class="card-noticia">
           <a
             href="https://www.eltribuno.com/salta/2025-7-7-11-16-0-mangione-habia-gente-que-cobraba-100-mil-pesos-por-sacar-un-turno-en-una-fila"
+            target="_blank"
           >
-            <h2>Salud publica</h2>
             <img
               class="img-noticias"
               src="./assets/img/politico.webp"
               alt="Salud publica"
               title="Salud publica"
             />
+            <h2>Salud publica</h2>
             <p>
               Mangione: “Había gente que cobraba 100 mil pesos por sacar un
               turno en una fila”
@@ -86,14 +209,15 @@
         <div class="card-noticia">
           <a
             href="https://www.eltribuno.com/policiales/2025-7-7-13-30-0-prision-preventiva-para-un-hombre-acusado-de-entrar-a-una-concesionaria-y-roba-100-millones-de-pesos"
+            target="_blank"
           >
-            <h2>Salta</h2>
             <img
               class="img-noticias"
               src="./assets/img/autos.webp"
               alt="fotos auto"
               title="autos"
             />
+            <h2>Salta</h2>
             <p>
               Prisión preventiva para un hombre acusado de entrar a una
               concesionaria y robar 100 millones de pesos
@@ -103,15 +227,17 @@
         </div>
         <div class="card-noticia">
           <a
+            target="_blank"
             href="https://www.eltribuno.com/salta/2025-7-7-10-31-0-avanza-la-construccion-de-la-autopista-entre-rosario-de-la-frontera-y-yatasto"
+            target="_blank"
           >
-            <h2>Salta</h2>
             <img
               class="img-noticias"
               src="./assets/img/construccion.webp"
               alt="Foto construccion"
               title="construccion"
             />
+            <h2>Salta</h2>
             <p>
               Avanza la construcción de la autopista entre Rosario de la
               Frontera y Yatasto
@@ -119,10 +245,29 @@
             <p id="fuente">Fuenta: Diario El Tribuno</p>
           </a>
         </div>
+        <div class="card-noticia">
+          <a
+            href="https://www.eltribuno.com/policiales/2025-7-7-8-37-0-imprudencia-al-volante-desata-un-violento-choque-en-cadena-en-avenida-paraguay"
+            target="_blank"
+          >
+            <img
+              class="img-noticias"
+              src="./assets/img/policial.webp"
+              alt="foto Siniestro vial"
+              title="Siniestro vial"
+            />
+            <h2>Siniestro vial en Salta</h2>
+            <p>
+              Imprudencia al volante desata un violento choque en cadena en
+              Avenida Paraguay
+            </p>
+            <p id="fuente">Fuenta: Diario El Tribuno</p>
+          </a>
+        </div>
       </div>
     </main>
     <footer id="footer">
-      <h2>derechos reservados de Mañanas Victoriosas</h2>
+      <h2>Derechos reservados La Fuente Salta</h2>
       <h2>Hecho por roquete</h2>
       <nav>
         <ul>
@@ -166,5 +311,10 @@
         </ul>
       </nav>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
