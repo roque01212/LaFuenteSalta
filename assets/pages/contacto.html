@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto</title>
-<link
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
   </head>
   <body>
     <header id="cabesera">
@@ -22,8 +23,8 @@
         />
       </a>
       <h1>La Fuente Salta</h1>
-      <nav| id="menu">
-        <ul >
+      <nav id="menu">
+        <ul>
           <li>
             <a href="./ulimasNoticias.html">Ultimas Noticias</a>
           </li>
@@ -40,96 +41,58 @@
       </nav>
     </header>
     <main>
-      <h2>Contacto</h2>
-      <div class="contenido">
-        <audio controls autoplay>
-          <source
-            src="https://24423.live.streamtheworld.com/FM999_56.mp3"
-            type="audio/mpeg"
-          />
-          Tu navegador no soporta audio HTML5.
-        </audio>
+      <section id="grid">
+        <h2 class="grid-title">Contacto</h2>
+        <section class="radio-grid">
+          <audio id="radio" controls autoplay>
+            <source
+              src="https://24423.live.streamtheworld.com/FM999_56.mp3"
+              type="audio/mpeg"
+            />
+            Tu navegador no soporta audio HTML5.
+          </audio>
+        </section>
+        <section class="form-grid">
+          <form class="form">
+            <label>Nombre</label>
+            <input type="text" name="" id="" />
 
-        <form>
-          <label>Nombre</label>
-          <input type="text" name="" id="" />
-          <br />
+            <label>Correo Electronico</label>
+            <input type="email" name="" id="" />
 
-          <label>Correo Electronico</label>
-          <input type="email" name="" id="" />
+            <label>Deja tus comentarios</label>
+            <textarea name="" id=""></textarea>
 
-          <br />
-          <label>Deja tus comentarios</label>
-          <textarea name="" id=""></textarea>
-          <br />
-          <br />
+            <input type="submit" value="enviar" class="button" />
+          </form>
+        </section>
+        <section class="contactos-grid">
+          <div class="contacto">
+            <h3>Contactate con Nosotros a traves de:</h3>
+            <p>Número de telefono: 123123123</p>
+            <p>Correo: roque@hotmail.com</p>
+          </div>
+        </section>
 
-          <input type="submit" value="enviar" />
-        </form>
-        <h3>Contactate con Nosotros a traves de:</h3>
-        <div class="contacto">
-          <p>Número de telefono: 123123123</p>
-          <p>Correo: roque@hotmail.com</p>
-        </div>
-        <div id="redes">
-          <nav>
-            <ul>
-              <li>
-                <a href="https://web.whatsapp.com/" target="_blank">
-                  <img
-                    class="img-footer"
-                    src="../img/WhatsApp.svg.webp"
-                    alt="logo de whatsapp"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com" target="_blank">
-                  <img
-                    class="img-footer"
-                    src="../img/instagram.webp"
-                    alt="logo de instagram"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com" target="_blank">
-                  <img class="img-footer" src="../img/x.avif" alt="logo de x" />
-                </a>
-              </li>
-              <li>
-                <a href="https://facebook.com" target="_blank">
-                  <img
-                    class="img-footer"
-                    src="../img/facebook.jfif"
-                    alt="logo de facebook"
-                  />
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <iframe
-          width="300"
-          height="300"
-          src="https://www.youtube.com/embed/TprBt68rM-E?si=tc88VgvOmAxXM5qE"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <section class="iframe-grid">
+          <iframe
+            src="https://www.youtube.com/embed/TprBt68rM-E?si=tc88VgvOmAxXM5qE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
 
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d905.47207648283!2d-65.39929857066693!3d-24.79927790200836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1750780074788!5m2!1ses!2sar"
-          width="300"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d905.47207648283!2d-65.39929857066693!3d-24.79927790200836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1750780074788!5m2!1ses!2sar"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+      </section>
     </main>
     <footer id="footer">
       <h2>derechos reservados La Fuente Salta</h2>
