@@ -138,6 +138,12 @@ main .filas {
   bottom: 100px;
 }
 
+/* Pagina sobreNosotros */
+
+.contenido {
+  padding: 20px;
+}
+
 /* Pagina Contacto */
 main #grid {
   display: grid;
