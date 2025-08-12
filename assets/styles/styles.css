@@ -27,7 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  width: 100vw;
+  width: 100%;
   border-bottom: 1px solid white;
 }
 #cabesera img {
@@ -54,9 +54,6 @@ body {
     transform: translateY(0);
     opacity: 1;
   }
-}
-#cabesera #menu {
-  margin-right: 10px;
 }
 #cabesera #menu ul {
   display: flex;
@@ -105,7 +102,7 @@ body {
     margin-left: -10px;
   }
   #cabesera #menu ul li a {
-    font-size: 12px;
+    font-size: 10px;
     padding: 7px;
   }
 }
@@ -115,12 +112,13 @@ body {
   grid-template-columns: minmax(260px, 20%) 1fr;
   grid-template-rows: auto;
   grid-template-areas: "left carrousel";
-  width: 90%;
+  margin-top: 30px;
+  width: 90vw;
   border-bottom: 1px solid #ccc;
 }
 #firts-section .aside-left {
   grid-area: left;
-  margin-right: 30px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
 }
@@ -150,6 +148,7 @@ body {
 }
 #firts-section .carousel-edit {
   grid-area: carrousel;
+  padding: 0 20px;
 }
 #firts-section .carousel-edit .title-carrousel {
   font-weight: bold;
@@ -164,7 +163,6 @@ body {
     grid-template-rows: auto auto;
     grid-template-areas: "carrousel" "left";
     width: 100%;
-    padding: 20px;
   }
   #firts-section .aside-left {
     grid-area: left;
