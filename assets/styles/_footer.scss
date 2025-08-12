@@ -24,6 +24,21 @@
     position: fixed;
     left: 0;
     bottom: 100px;
+    animation: alert 2s infinite ease-in-out;
+    @keyframes alert {
+      0% {
+        transform: translateX(0);
+      }
+      40% {
+        transform: translateX(20px);
+      }
+      60% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
   }
   @media (max-width: 1140px) {
     span {
