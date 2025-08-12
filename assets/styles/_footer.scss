@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+.footer {
+  @include v.flex-row(flex, row, space-around, center);
+  border-top: 1px solid white;
+  ul {
+    @include v.flex-row(flex, row, space-around, center);
+    li {
+      margin: 10px;
+    }
+  }
+  span {
+    margin-top: 20px;
+
+    h2 {
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+  .img-footer {
+    height: 8vh;
+  }
+  .WhatsApp {
+    position: fixed;
+    left: 0;
+    bottom: 100px;
+  }
+  @media (max-width: 1140px) {
+    span {
+      h2 {
+        font-size: 22px;
+      }
+    }
+    .img-footer {
+      height: 6vh;
+    }
+  }
+  @media (max-width: 1000px) {
+    span {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  @include v.tablet {
+    ul {
+      padding: 0;
+    }
+    @include v.flex-row(flex, column, center, center);
+  }
+
+  @media (max-width: 600px) {
+    span {
+      h2 {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "variables" as v;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  font-family: v.$fuente;
+  background-color: v.$primary;
+  color: v.$secondary;
+}
