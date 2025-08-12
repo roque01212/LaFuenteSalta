@@ -57,4 +57,11 @@
       }
     }
   }
+  @include v.mobile {
+    span {
+      h2 {
+        font-size: 15px;
+      }
+    }
+  }
 }

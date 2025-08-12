@@ -32,13 +32,18 @@
   }
   #menu {
     margin-right: 10px;
+    width: 100vw;
     ul {
       display: flex;
+      justify-content: center;
+      align-items: center;
+
       li {
         a {
           display: block;
           text-decoration: none;
           color: v.$secondary;
+          text-align: center;
           padding: 10px;
           transition: all 300ms;
           &:hover {
@@ -62,11 +67,25 @@
       border-radius: 20px;
     }
     #menu {
+      margin-top: 10px;
       ul {
         li {
           a {
             font-size: 13px;
             padding: 15px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 436px) {
+    #menu {
+      ul {
+        margin-left: -10px;
+        li {
+          a {
+            font-size: 12px;
+            padding: 7px;
           }
         }
       }
