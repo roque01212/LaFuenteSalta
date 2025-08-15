@@ -385,7 +385,7 @@ body {
     font-size: 15px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .quienes-somos {
     flex-direction: column;
   }
