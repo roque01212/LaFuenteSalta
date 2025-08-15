@@ -1,0 +1,140 @@
+@use "variables" as v;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 50px;
+  .categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "pol .  med"
+      ".  tec ."
+      "fut . politica";
+    justify-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 70%;
+  }
+  .categoria {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    transition: all 300ms;
+
+    a {
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      .img-categoria {
+        width: 100%;
+        border-radius: 20px;
+      }
+      h2 {
+        margin-top: 15px;
+        font-size: 25px;
+      }
+    }
+    &:hover {
+      scale: (1.1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: red;
+      transition: width 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  .pol {
+    grid-area: pol;
+  }
+  .med {
+    grid-area: med;
+  }
+  .tec {
+    grid-area: tec;
+  }
+  .fut {
+    grid-area: fut;
+  }
+  .politica {
+    grid-area: politica;
+  }
+  @media (max-width: 1000px) {
+    .categorias {
+      width: 75%;
+    }
+  }
+  @media (max-width: 700px) {
+    gap: 30px;
+
+    .title {
+      font-size: 22px;
+    }
+    .categorias {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+      grid-template-areas:
+        "med pol "
+        "tec fut"
+        "politica politica";
+      width: 70%;
+      .categoria {
+        a {
+          h2 {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .title {
+      font-size: 20px;
+    }
+    .categorias {
+      grid-template-columns: 0.7fr;
+
+      grid-template-areas:
+        "med"
+        "pol"
+        "tec"
+        "fut"
+        "politica";
+      width: 100%;
+      .categoria {
+        a {
+          h2 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  @include v.mobile {
+    .title {
+      font-size: 18px;
+    }
+    .categorias {
+      .categoria {
+        a {
+          h2 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

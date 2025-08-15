@@ -1,0 +1,84 @@
+@use "variables" as v;
+
+.quienes-somos {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  margin-bottom: 20px;
+  .left {
+    min-width: 40%;
+    .img-programa {
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    .descripciones {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+
+      .img-individual {
+        width: 30%;
+        border-radius: 20px;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    gap: 35px;
+    .descripciones {
+      .img-individual {
+        width: 20%;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+
+    .description {
+      .card1 {
+        flex-direction: row-reverse;
+      }
+      .descripciones {
+        .img-individual {
+          width: 50%;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .description {
+      align-items: center;
+
+      .descripciones {
+        flex-direction: column;
+        width: 80%;
+        .img-individual {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include v.mobile {
+    .description {
+      .descripciones {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

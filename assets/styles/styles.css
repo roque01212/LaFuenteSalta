@@ -61,6 +61,7 @@ body {
   align-items: center;
 }
 #cabesera #menu ul li a {
+  position: relative;
   display: block;
   text-decoration: none;
   color: #fff;
@@ -343,6 +344,262 @@ body {
   }
 }
 
+.quienes-somos {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.quienes-somos .left {
+  min-width: 40%;
+}
+.quienes-somos .left .img-programa {
+  width: 100%;
+  border-radius: 20px;
+}
+.quienes-somos .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.quienes-somos .description .descripciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.quienes-somos .description .descripciones .img-individual {
+  width: 30%;
+  border-radius: 20px;
+}
+@media (max-width: 1000px) {
+  .quienes-somos {
+    gap: 35px;
+  }
+  .quienes-somos .descripciones .img-individual {
+    width: 20%;
+  }
+  .quienes-somos .descripciones p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 800px) {
+  .quienes-somos {
+    flex-direction: column;
+  }
+  .quienes-somos .description .card1 {
+    flex-direction: row-reverse;
+  }
+  .quienes-somos .description .descripciones .img-individual {
+    width: 50%;
+  }
+  .quienes-somos .description .descripciones p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 550px) {
+  .quienes-somos .description {
+    align-items: center;
+  }
+  .quienes-somos .description .descripciones {
+    flex-direction: column;
+    width: 80%;
+  }
+  .quienes-somos .description .descripciones .img-individual {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .quienes-somos .description .descripciones p {
+    font-size: 12px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 50px;
+}
+.main .categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "pol .  med" ".  tec ." "fut . politica";
+  justify-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 70%;
+}
+.main .categoria {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  transition: all 300ms;
+}
+.main .categoria a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+.main .categoria a .img-categoria {
+  width: 100%;
+  border-radius: 20px;
+}
+.main .categoria a h2 {
+  margin-top: 15px;
+  font-size: 25px;
+}
+.main .categoria:hover {
+  scale: 1.1;
+}
+.main .categoria::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+.main .categoria:hover::after {
+  width: 100%;
+}
+.main .pol {
+  grid-area: pol;
+}
+.main .med {
+  grid-area: med;
+}
+.main .tec {
+  grid-area: tec;
+}
+.main .fut {
+  grid-area: fut;
+}
+.main .politica {
+  grid-area: politica;
+}
+@media (max-width: 1000px) {
+  .main .categorias {
+    width: 75%;
+  }
+}
+@media (max-width: 700px) {
+  .main {
+    gap: 30px;
+  }
+  .main .title {
+    font-size: 22px;
+  }
+  .main .categorias {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    grid-template-areas: "med pol " "tec fut" "politica politica";
+    width: 70%;
+  }
+  .main .categorias .categoria a h2 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 600px) {
+  .main .title {
+    font-size: 20px;
+  }
+  .main .categorias {
+    grid-template-columns: 0.7fr;
+    grid-template-areas: "med" "pol" "tec" "fut" "politica";
+    width: 100%;
+  }
+  .main .categorias .categoria a h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .main .title {
+    font-size: 18px;
+  }
+  .main .categorias .categoria a h2 {
+    font-size: 18px;
+  }
+}
+
+.noticias {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "lateral1 central1 lateral2" "lateral3 central1 lateral4" "lateral5 central2 lateral6";
+  gap: 30px;
+  margin: 0 25px;
+}
+.noticias .noticia {
+  display: flex;
+  flex-direction: column;
+}
+.noticias .noticia p {
+  margin-top: 15px;
+}
+.noticias .noticia .img-noticia {
+  width: 100%;
+  border-radius: 20px;
+}
+.noticias .noticia a {
+  text-decoration: none;
+  font-size: 18px;
+  color: red;
+}
+.noticias .noticia a p {
+  text-align: center;
+}
+.noticias .lateral1 {
+  grid-area: lateral1;
+  border-bottom: 1px solid #ccc;
+}
+.noticias .lateral2 {
+  grid-area: lateral2;
+  border-bottom: 1px solid #ccc;
+}
+.noticias .lateral3 {
+  grid-area: lateral3;
+  border-bottom: 1px solid #ccc;
+}
+.noticias .central1 {
+  grid-area: central1;
+}
+.noticias .central2 {
+  grid-area: central2;
+  margin-bottom: 20px;
+}
+.noticias .lateral4 {
+  grid-area: lateral4;
+  border-bottom: 1px solid #ccc;
+}
+.noticias .lateral5 {
+  grid-area: lateral5;
+}
+.noticias .lateral6 {
+  grid-area: lateral6;
+}
+@media (max-width: 1000px) {
+  .noticias {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "lateral1 lateral2 " "lateral3 lateral4 " "central1 central2" "lateral5 lateral6";
+  }
+}
+@media (max-width: 600px) {
+  .noticias {
+    grid-template-columns: 1fr;
+    grid-template-areas: "lateral1" "lateral2" "central1" "central2" "lateral3" "lateral4" "lateral5" "lateral6";
+  }
+}
+.noticias .noticia {
+  border-bottom: none;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -391,7 +648,7 @@ body {
 }
 @media (max-width: 1140px) {
   .footer span h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .footer .img-footer {
     height: 6vh;
