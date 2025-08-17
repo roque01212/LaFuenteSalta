@@ -395,9 +395,6 @@ body {
   .quienes-somos .description .descripciones .img-individual {
     width: 50%;
   }
-  .quienes-somos .description .descripciones p {
-    font-size: 13px;
-  }
 }
 @media (max-width: 550px) {
   .quienes-somos .description {
