@@ -2,10 +2,10 @@
 
 #cabesera {
   @include v.flex-row(flex, row, space-between, center);
-
   height: 100px;
   width: 100%;
   border-bottom: 1px solid white;
+  padding-right: 25px;
 
   img {
     height: v.$logo;
@@ -17,8 +17,7 @@
     font-weight: bold;
     span {
       display: inline-block;
-      transform: translateY(-100px);
-      opacity: 0;
+
       animation: caer 0.5s forwards;
       @keyframes caer {
         from {

@@ -29,6 +29,7 @@ body {
   height: 100px;
   width: 100%;
   border-bottom: 1px solid white;
+  padding-right: 25px;
 }
 #cabesera img {
   height: 9vh;
@@ -41,8 +42,6 @@ body {
 }
 #cabesera h1 span {
   display: inline-block;
-  transform: translateY(-100px);
-  opacity: 0;
   animation: caer 0.5s forwards;
 }
 @keyframes caer {
@@ -156,7 +155,7 @@ body {
   font-size: 40px;
 }
 #firts-section .carousel-edit .resume-carrousel {
-  font-size: 15px;
+  font-size: 19px;
 }
 @media (max-width: 1000px) {
   #firts-section {
